@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header">123</h1>
+    <div id="content"></div>
+    <!-- <script src="src/script.js"></script> -->
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'Roteiro da Aula - Javascript';
+
+/* 
+
+ - tag script
+   - dentro do HTML
+   - usar 'src' para um arquivo externo
+
+*/
+
+const content = `
+  - 2-tipo_variaveis.html <br />
+  - 3-operacoes.html <br />
+  - 4-funcoes.html <br />
+  - 5-obj_array_interacoes.html <br />
+`;
+
+document.querySelector('#content').innerHTML = content;
+
+</script>

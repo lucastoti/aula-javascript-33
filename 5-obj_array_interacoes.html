@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <div id="content"></div>
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'Objetos, arrays, interações';
+
+/*
+ - Array
+    - Lista de Dados
+    - Pode conter dados de diversos tipos (number, string, boolean) 
+    - A primeira posição de um array é 0
+    - Propriedades de um array
+      - length
+    - Metodos de um array
+      - push
+      - pop
+    - Operações com um array
+      - includes
+      - for
+      ...
+
+
+ - Objetos
+  - É uma entidade independente, com propriedades e tipos (ex: carro)
+  - Pode conter dados de diversos tipos (number, string, boolean)
+    - Inclusive funções
+
+
+*/
+
+var array = [12, 'Toti', true, 4 + 5, 'Diversidade'];
+
+// for (i = 0; i < array.length; i++) { };
+// for (valor of array) { };
+// array.forEach(function (valor) { });
+// array.forEach((valor) => { }); arrow function
+// array.forEach(valor => console.log(valor));
+
+
+var informacoesEmpresa = {
+  nome: nomeDaMinhaEmpresa(),
+  ano: anoFundacaoDaMinhaEmpresa(),
+  cidade: 'Rio de Janeiro',
+  temOsMelhoresAlunos: true
+}
+
+function nomeDaMinhaEmpresa() {
+  return 'Toti Diversidade';
+};
+
+function anoFundacaoDaMinhaEmpresa() {
+  return 2019;
+};
+
+
+
+function ondeNasci() {
+  // console.log(this);
+  console.log(`Olá, eu nasci em ${this.cidade}`);
+};
+
+var meusDados = {
+  cidade: 'Manaus',
+  nascimento: ondeNasci
+};
+
+meusDados.nascimento();
+
+</script>
+
+

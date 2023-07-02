@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <div id="content"></div>
+  </body>
+</html>
+
+<script>
+document.querySelector('#header').innerHTML = 'Tipos Variáveis';
+
+/*
+ - tag script para usar javascript dentro de um arquivo html
+ - console.log/warn/error/table
+ - uso de comentários //
+ - tipos variáveis
+    - number
+      - inteiros (3, 11)
+      - fracionários (3.14, 4.56)
+      - negativos (-3, -79.6)
+      - especiais (infinity, NaN)
+    - string
+      - aspas simples ou duplas ( ‘ ’ , “ “ )
+      - template literals/string ( ` ` )
+        - multinha
+        - interpolação de valores
+    - boolean (true, false)
+
+   - representações para o vazio
+    - null
+    - undefined
+*/
+
+var numeroInteiro = 2;
+var numeroFracionario = 5.98;
+var numeroNegativo = -45;
+var stringAspasSimples = 'totiSimples';
+var stringAspasDupla = "totiDupla";
+var stringTemplate = `totiTemplate`;
+var booleanTrue = true;
+var booleanFalse = false;
+
+console.log(typeof numeroInteiro);
+console.warn(typeof numeroFracionario);
+console.error(typeof numeroNegativo);
+console.table(typeof stringAspasSimples, typeof stringAspasDupla, typeof stringTemplate);
+console.table(typeof booleanTrue, typeof booleanFalse);
+console.warn(typeof naoDeclarado);
+
+</script>

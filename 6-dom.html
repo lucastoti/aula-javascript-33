@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <p>Lista de compras</p>
+    <ul>
+      <li>Café</li>
+      <li>Leite</li>
+      <li>Pão</li>
+    </ul>
+
+    <br />
+    <b id="rodape">
+      <div id="esperandoConteudo"></div>
+    </b>
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'DOM';
+
+/*
+ - DOM
+    - Document Object Model = Modelo de Documento por Objetos
+    - Interface de programação que os navegadores utilizam para representar páginas na web
+    - HTML ou XML
+
+  - Interações com a DOM
+    - Selector
+      - querySelector
+      - querySelectorAll
+    - Id, classe, tag
+      - getElementById
+      - getElementsByClassName
+      - getElementsByTagName
+    - Editar elementos
+      - innerHtml = Retorna o texto, COM formatações e COM elementos html
+      - textContent = Retorna o text COM formatações, mas SEM os elementos html
+    - Adicionar elementos
+      - createElement
+      - appendChild 
+    - Remover elementos
+      - removeChild
+
+
+ - Objetos
+  - É uma entidade independente, com propriedades e tipos (ex: carro)
+  - Pode conter dados de diversos tipos (number, string, boolean)
+    - Inclusive funções
+
+
+*/
+
+
+const novaDiv = document.createElement("div");
+novaDiv.innerHTML = "Minha nova DIV no rodapé";
+document.getElementById("esperandoConteudo").appendChild(novaDiv);
+
+
+// var rodape = document.getElementById("rodape");
+// rodape.removeChild(rodape.children[0]);
+
+</script>

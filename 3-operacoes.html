@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <div id="content"></div>
+  </body>
+</html>
+
+<script>
+document.querySelector('#header').innerHTML = 'Operações';
+
+/*
+ - operações -> number
+    - + ( soma ) , - ( subtração ) , * ( multiplicação ), / ( divisão )
+    - % ( resto )
+    - ** ( potenciação )
+ - operações -> string
+    - concatenação ( + )
+    - template literals/string ( ` ` )
+  - comparadores -> retornam boolean
+    - igualdade ( ==, === )
+    - diferença ( !=, !== )
+    - menor que ( < ), maior que ( > )
+    - menor ou igual a ( <= ), maior ou igual a ( >= )
+  - operações -> boolean
+    - and ( && )
+    - or ( || )
+    - not ( ! ) 
+    - tabela verdade -> https://www.treinaweb.com.br/blog/operadores-logicos
+*/
+
+var dois = 2;
+var um = 1;
+var tres = 3;
+var primeiroNome = 'Toti';
+var ultimoNome = 'Diversidade';
+const constante = 10;
+
+console.log('5 + 5 = ', 5 + 5);
+console.log('dois - um = ', dois - um);
+console.log('dois * um = ', dois * um);
+console.log('dois / um = ', dois / um);
+console.log('tres % dois = ', tres % dois);
+console.log('dois**3 = ', dois**3); // 2 * 2 * 2 !== 2 * 3
+console.log("'To' + 'ti' = ", 'To' + 'ti');
+console.log('"teste dupla"');
+console.log('`teste template string`');
+console.log(`${primeiroNome} ${ultimoNome}`);
+console.log(`A subtração de dois - um é igual a: ${dois - um}`);
+
+// constante = 11;
+// console.log(constante);
+
+</script>
