@@ -33,11 +33,20 @@ document.querySelector('#header').innerHTML = 'Operações';
     - tabela verdade -> https://www.treinaweb.com.br/blog/operadores-logicos
 */
 
+var numero = 10;
+var texto = 'toti';
+// false || true
+if (numero == 11 || texto == 'toti') {
+  console.log('entrou na condicao');
+}
+
+
 var dois = 2;
 var um = 1;
 var tres = 3;
 var primeiroNome = 'Toti';
 var ultimoNome = 'Diversidade';
+var nomeCompleto = `${primeiroNome} ${ultimoNome}`;
 const constante = 10;
 
 console.log('5 + 5 = ', 5 + 5);
@@ -46,13 +55,19 @@ console.log('dois * um = ', dois * um);
 console.log('dois / um = ', dois / um);
 console.log('tres % dois = ', tres % dois);
 console.log('dois**3 = ', dois**3); // 2 * 2 * 2 !== 2 * 3
-console.log("'To' + 'ti' = ", 'To' + 'ti');
-console.log('"teste dupla"');
-console.log('`teste template string`');
-console.log(`${primeiroNome} ${ultimoNome}`);
-console.log(`A subtração de dois - um é igual a: ${dois - um}`);
 
-// constante = 11;
-// console.log(constante);
+
+
+console.log("soma = ", primeiroNome + ' '+ ultimoNome);
+
+console.log(`O nome da minha empresa é ${primeiroNome} e ela é da cor roxa`)
+
+console.log(`${primeiroNome} ${ultimoNome}`);
+
+console.log(`A subtração de dois - um é igual a: ${dois - um} (valor final)`);
+
+console.log('nome completo', nomeCompleto);
+
+
 
 </script>

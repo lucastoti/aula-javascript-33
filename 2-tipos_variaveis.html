@@ -35,6 +35,7 @@ document.querySelector('#header').innerHTML = 'Tipos Variáveis';
     - undefined
 */
 
+
 var numeroInteiro = 2;
 var numeroFracionario = 5.98;
 var numeroNegativo = -45;
@@ -44,11 +45,49 @@ var stringTemplate = `totiTemplate`;
 var booleanTrue = true;
 var booleanFalse = false;
 
-console.log(typeof numeroInteiro);
-console.warn(typeof numeroFracionario);
+var tipoNull = null;
+
+console.log('primeiro console', numeroInteiro);
+console.warn('segunda linha', typeof numeroFracionario);
 console.error(typeof numeroNegativo);
-console.table(typeof stringAspasSimples, typeof stringAspasDupla, typeof stringTemplate);
-console.table(typeof booleanTrue, typeof booleanFalse);
+
+
+
+console.table('console table', stringAspasSimples, stringAspasDupla, stringTemplate);
+
+
+
+
+console.table('segundo console table', typeof booleanTrue, typeof booleanFalse);
+
+
+
 console.warn(typeof naoDeclarado);
+
+console.log('variavel null =>', tipoNull);
+
+// const X var/let
+
+const constante = 10;
+let variavel = 10;
+console.log('constante  =', constante);
+
+// constante = 11;
+variavel = 11;
+
+console.log('variavel =', variavel);
+
+
+
+// var X let
+
+// a++ = a + 1
+for(var a = 0; a < 2; a++) {
+  // console.log(a)
+}
+
+console.log('variavel a', a);
+
+
 
 </script>

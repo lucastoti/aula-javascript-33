@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <h1 id="header"></h1>
+    <h1 id="header">Toti Diversidade</h1>
     <div id="content"></div>
   </body>
 </html>
@@ -23,23 +23,45 @@ document.querySelector('#header').innerHTML = 'Funções';
 var dois = 2;
 var um = 1;
 var tres = 3;
+
+
+// Tela A 
 var primeiroNome = 'Toti';
 var ultimoNome = 'Diversidade';
 
-console.log(concatenar(primeiroNome, ultimoNome));
+const resultadoConcat = concatenar(primeiroNome, ultimoNome);
+console.log(resultadoConcat);
 
-function concatenar(primeiro, ultimo) {
-  var resultado = `${primeiro} ${ultimo}`;
+
+// Tela B
+var filme = 'Mario';
+var ano = 2000;
+
+console.log(concatenar(filme, ano));
+
+
+function concatenar(A, B) {
+  resultado = `${A} ${B}`;
   return resultado;
 };
 
-function soma(a, b) {
-  var resultado = a + b;
-  return resultado;
-};
+
+
+// function soma(a, b) {
+//   var resultado = a + b;
+//   return resultado;
+// };
+
+// Tela A - Titulo = nomeDaMinhaEmpresa()
+// Tela B - Rodapé = nomeDaMinhaEmpresa()
+// Tela C - Meio da página = nomeDaMinhaEmpresa()
+
+const retornoDaFuncao = nomeDaMinhaEmpresa();
+
+// console.log(retornoDaFuncao);
 
 function nomeDaMinhaEmpresa() {
-  return 'Toti Diversidade';
+  return 'Toti Diversidade 123456';
 };
 
 function anoFundacaoDaMinhaEmpresa() {
