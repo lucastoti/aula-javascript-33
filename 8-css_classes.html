@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <input type="number" onchange="trocarClasse(this.value)" />
+    <button id="botao-perigo" class="botao-perigo">Perigo</button>
+    <button class='botao-alerta'>Alerta</button>
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'Classes, CSS e manipulação de estilos';
+
+/*
+ - Propriedades do CSS em camelCase (javascript)
+    - backgroundColor
+    - maxWidth
+    - fontSize
+
+ - Propriedades do CSS (na classe ou estilo)
+    - background-color
+    - max-width
+    - font-size
+
+ - Propriedade classList (javascript)
+    - add
+    - remove
+    - toggle
+    - contains
+
+*/
+
+// let myButton = document.querySelector('button');
+// myButton.style.backgroundColor = 'red';
+// myButton.classList.add() remove() contains() toggle("visible", i < 10)
+
+// myButton.addEventListener('click', function (event) {
+//   console.log(event);
+// });
+
+let botaoPerigo = document.getElementById('botao-perigo');
+
+function trocarClasse(valor) {
+  botaoPerigo.classList.toggle('botao-perigo', valor == 10);
+  botaoPerigo.classList.toggle('botao-alerta', valor != 10);
+}
+
+botaoPerigo.addEventListener('click', function (event) {
+  botaoPerigo.style.backgroundColor = 'gray';
+});
+
+
+</script>
+
+<style type="text/css">
+  .botao-perigo {
+    background-color: red;
+    font-size: 20px;
+  }
+
+  .botao-alerta {
+    background-color: #FFFF00;
+    font-size: 15px;
+  }
+
+
+</style>
+
+

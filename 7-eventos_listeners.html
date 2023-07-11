@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- tipos de eventos com HTML -->
+    <h1 id="header"></h1>
+    Nome
+    <input id='input-nome' type="text" onchange="validate(this.value, 'nome')" /> <br />
+    Telefone
+    <input id='input-telefone' type="number" onchange="validate(this.value, 'telefone')" /> <br />
+    Senha    
+    <input id='input-senha' type="password" /> <br />
+
+    Produto
+    <input type="number" onchange="chamarAPI(this.value)" /> 
+    <button onclick='clicou()'>Alert</button>
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'Eventos, Atribuição no HTML e Event Listeners';
+
+/*
+ - Tipos de eventos e event listeners (javascript)
+    - click
+    - change
+    - focus
+    - keyup
+        - addEventListener
+        - target
+
+ - Tipos eventos no HTML
+    - onchange
+    - onclick
+
+
+*/
+
+var nome = '';
+var telefone = 0;
+
+function validate(value, tipo) {
+  if (tipo === 'nome') {
+    nome = value;
+  } else {
+    telefone = value;
+  }
+};
+
+// Link para consumir uma API
+// https://www.freecodecamp.org/portuguese/news/tutorial-de-fetch-api-em-javascript-exemplos-de-post-e-cabecalho/
+
+function chamarAPI(id) {
+  fetch(`https://dummyjson.com/products/${id}`)
+  .then(res => res.json())
+  .then(json => console.log(json))
+};
+
+function clicou(e) {
+  fetch('https://dummyjson.com/products/1')
+  .then(res => res.json())
+  .then(json => console.log(json))
+};  
+
+
+// event listeners - Javascript
+
+let inputNome = document.getElementById('input-nome');
+inputNome.addEventListener('keyup', function (event) {
+  if('event.target.value' === 'red') {
+    inputNome.style.backgroundColor = 'red';
+  }
+  console.log(event.target.value);
+});
+
+let inputTelefone = document.getElementById('input-telefone');
+inputTelefone.addEventListener('keyup', function (event) {
+  console.log(event.target.value);
+});
+
+let inputSenha = document.getElementById('input-senha');
+inputSenha.addEventListener('keyup', function (event) {
+  console.log(event.target.value);
+  var base64 = btoa(event.target.value);
+  console.log(base64);
+  console.log(atob(base64));
+
+});
+
+
+</script>

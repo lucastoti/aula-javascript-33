@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <input type="number" onchange="validate(this.value)" />
+    <button >Alert</button>
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'JSON';
+
+/*
+ - O que é JSON?
+    - JavaScript Object Notation
+    - Representação de dados em texto
+    - Comunicação entre sistemas diferentes
+
+ - Manipulações com um JSON
+    - JSON.stringify (objeto => string)
+    - JSON.parse (string => objeto)
+
+*/
+
+let myButton = document.querySelector('button');
+// myButton.style.backgroundColor = 'red';
+// myButton.classList.add() remove() contains() toggle("visible", i < 10)
+
+myButton.addEventListener('click', function (event) {
+  console.log(event);
+});
+
+let myInput = document.querySelector('input');
+myInput.addEventListener('change', function (event) {
+  console.log(event.target.value);
+});
+
+
+</script>
+
+<style type="text/css">
+	/*h1 {color:red;}
+	p {color:blue;}*/
+</style>

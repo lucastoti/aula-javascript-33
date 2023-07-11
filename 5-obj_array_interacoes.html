@@ -6,7 +6,8 @@
   </head>
   <body>
     <h1 id="header"></h1>
-    <div id="content"></div>
+    <div id="content">linha 1</div>
+    <div id="content">linha 2</div>
   </body>
 </html>
 
@@ -83,32 +84,66 @@ minhaLista.forEach(valor => {
   }
 });
 
-var informacoesEmpresa = {
-  nome: nomeDaMinhaEmpresa(),
-  ano: anoFundacaoDaMinhaEmpresa(),
-  cidade: 'Rio de Janeiro',
-  temOsMelhoresAlunos: true
-}
+
+
+console.log('----------- OBJETOS -----------');
 
 function nomeDaMinhaEmpresa() {
-  return 'Toti Diversidade';
+  var toti = 'Toti Diversidade';
+  return toti;
 };
 
 function anoFundacaoDaMinhaEmpresa() {
   return 2019;
 };
 
+// console.log('informacoesEmpresa.nome',
+//   informacoesEmpresa.nome);
+
+// console.log('informacoesEmpresa.nome',
+//   informacoesEmpresa.nome());
+
+// console.log('informacoesEmpresa.ano',
+//   informacoesEmpresa.ano);
+
+
 
 
 function ondeNasci() {
   // console.log(this);
-  // console.log(`Olá, eu nasci em ${this.cidade}`);
+  // console.log(`Olá, eu nasci em ${this.cidade} no bairro ${this.bairro}`);
 };
+
+var informacoesEmpresa = {
+  nome: 'Toti',
+  ano: anoFundacaoDaMinhaEmpresa(), // 2019
+  cidade: 'Rio de Janeiro',
+  temOsMelhoresAlunos: true
+}
+
 
 var meusDados = {
   cidade: 'Manaus',
-  nascimento: ondeNasci
+  nascimento: ondeNasci,
+  bairro: 'São Jorge',
+  empresa: informacoesEmpresa.nome
+
 };
+
+console.log(meusDados);
+
+console.log(meusDados.empresa.nome);
+// document.getElementById('content').textContent = meusDados.empresa.cidade;
+
+// function teste() {
+//   console.log(this);
+// };
+// teste();
+
+
+// const meuArrayGeral = [informacoesEmpresa, meusDados];
+// console.log('verificando meu array', 
+//   meuArrayGeral[2].cidade);
 
 meusDados.nascimento();
 

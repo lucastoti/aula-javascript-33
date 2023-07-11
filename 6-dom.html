@@ -6,23 +6,34 @@
   </head>
   <body>
     <h1 id="header"></h1>
-    <p>Lista de compras</p>
+    <h1 id="header"></h1>
+    <p id='lista-compras' class='texto-azul'>Lista de compras</p>
     <ul>
-      <li>Café</li>
-      <li>Leite</li>
+      <li class='texto-azul'>Café</li>
+      <li id='linha-leite'>Leite</li>
       <li>Pão</li>
     </ul>
 
     <br />
-    <b id="rodape">
-      <div id="esperandoConteudo"></div>
-    </b>
+    <b id="rodape" class='texto-azul'></b>
   </body>
 </html>
 
 <script>
 
-document.querySelector('#header').innerHTML = 'DOM';
+document.querySelector('#header').textContent = 'DOM';
+// document.querySelectorAll('#header')[0].innerHTML = 'DOM';
+// document.querySelectorAll('#header')[1].innerHTML = 'Aula DOM'
+// // console.log(document.querySelectorAll('#header'));
+
+// const elemento = document.getElementsByClassName('texto-azul');
+// console.log(elemento);
+
+// const elementoTAG = document.getElementsByTagName('li');
+// console.log(elementoTAG[1]);
+
+// const elementoID = document.getElementById('linha-leite');
+// console.log(elementoID);
 
 /*
  - DOM
@@ -56,13 +67,21 @@ document.querySelector('#header').innerHTML = 'DOM';
 
 */
 
+var listaCompras = document.getElementsByTagName('ul')[0];
+const novoElemento = document.createElement('li');
+novoElemento.textContent = 'Açucar';
+listaCompras.appendChild(novoElemento);
+
+// listaCompras.innerHTML = '<b>Teste 1</b> <br/> <i>Teste 2</i>'
+
+// listaCompras.textContent = '<b>Teste 1</b> <br/> <i>Teste 2</i>';
 
 const novaDiv = document.createElement("div");
-novaDiv.innerHTML = "Minha nova DIV no rodapé";
-document.getElementById("esperandoConteudo").appendChild(novaDiv);
+novaDiv.innerHTML = "Minha nova <i>DIV</i> no rodapé";
+document.getElementById("rodape").appendChild(novaDiv);
 
-
-// var rodape = document.getElementById("rodape");
-// rodape.removeChild(rodape.children[0]);
+var rodape = document.getElementById("rodape");
+console.log('rodape.children', rodape.children);
+rodape.removeChild(rodape.children[0]);
 
 </script>
