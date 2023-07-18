@@ -8,7 +8,7 @@
     <h1 id="header"></h1>
     <input type="number" onchange="trocarClasse(this.value)" />
     <button id="botao-perigo" class="botao-perigo">Perigo</button>
-    <button class='botao-alerta'>Alerta</button>
+    <button class='botao-alerta' style="font-size: 30px">Alerta</button>
   </body>
 </html>
 
@@ -46,8 +46,13 @@ document.querySelector('#header').innerHTML = 'Classes, CSS e manipulação de e
 let botaoPerigo = document.getElementById('botao-perigo');
 
 function trocarClasse(valor) {
-  botaoPerigo.classList.toggle('botao-perigo', valor == 10);
-  botaoPerigo.classList.toggle('botao-alerta', valor != 10);
+  if (valor == 10) {
+      botaoPerigo.classList.add('botao-alerta');
+  } else {
+    botaoPerigo.classList.remove('botao-alerta');
+  }
+  // botaoPerigo.classList.add('botao-perigo', valor == 10);
+  // botaoPerigo.classList.toggle('botao-alerta', valor != 10);
 }
 
 botaoPerigo.addEventListener('click', function (event) {
@@ -66,6 +71,10 @@ botaoPerigo.addEventListener('click', function (event) {
   .botao-alerta {
     background-color: #FFFF00;
     font-size: 15px;
+  }
+
+  .botao-alerta:hover {
+    background-color: green;
   }
 
 

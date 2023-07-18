@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <input type="number" onchange="validate(this.value)" />
+    <button >Alert</button>
+  </body>
+</html>
+
+<script>
+
+document.querySelector('#header').innerHTML = 'JSON';
+
+/*
+ - O que é JSON?
+    - JavaScript Object Notation
+    - Representação de dados em texto
+    - Comunicação entre sistemas diferentes
+
+ - Manipulações com um JSON
+    - JSON.stringify (objeto => string)
+    - JSON.parse (string => objeto)
+*/
+
+// 1 = cardiologista
+// 2 = pediatra
+
+const deparmentIds = [1, 3, 5, 6];
+
+const objeto = {
+  nome: 'Lucas',
+  turma: 'Toti', 
+  dia: 17
+};
+console.log(deparmentIds);
+
+const objParaString = JSON.stringify(deparmentIds);
+console.log('JSON.stringify =>',  objParaString)
+
+const retorno = {
+  status: 200,
+  mensagem: 'Sucesso na requisição',
+  consultas: [
+    {
+      id: 1,
+      nome: 'Consulta 1'
+    },
+    {
+      id: 2,
+      nome: 'Consulta 2'
+    }
+  ]
+}
+
+const retornoAPI = JSON.stringify(retorno);
+
+console.log('retorno da API', retornoAPI)
+
+const tratamentoDoRetorno = JSON.parse(retornoAPI);
+console.log(tratamentoDoRetorno);
+console.log(tratamentoDoRetorno.mensagem)
+
+</script>
